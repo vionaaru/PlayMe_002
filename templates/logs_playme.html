@@ -10,6 +10,11 @@
             padding: 10px;
             border: 1px solid #ccc;
             overflow-x: auto;
+            font-family: monospace;
+        }
+        .line-number {
+            color: gray;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -17,7 +22,7 @@
     <h1>Логи PlayMe</h1>
     <pre>
         {% for line in logs %}
-            {{ line|escape }}
+            <span class="line-number">{{ forloop.counter }}</span> {{ line|escape }}
         {% endfor %}
     </pre>
 </body>

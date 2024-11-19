@@ -20,7 +20,7 @@ def main():
 
     # Используем порт из config.py
     if len(sys.argv) == 2 and sys.argv[1] == "runserver":
-        sys.argv.append(f"0.0.0.0:{getattr(config, 'DJANGO_PORT', 8000)}")
+        sys.argv.append(f"127.0.0.1:{getattr(config, 'DJANGO_PORT', 8000)}")
 
     execute_from_command_line(sys.argv)
 
