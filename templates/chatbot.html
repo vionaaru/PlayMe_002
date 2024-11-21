@@ -1,4 +1,5 @@
 {% load static %}
+{% load static_dist %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,8 +7,8 @@
     <link rel="icon" type="image/svg+xml" href="{% static 'favicon.svg' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbot</title>
-    <script type="module" crossorigin src="{% static 'assets/index-RpS45_wZ.js' %}"></script>
-    <link rel="stylesheet" crossorigin href="{% static 'assets/index-DKC6JgO1.css' %}">
+    <script type="module" crossorigin src="{% dist_static 'index' '.js' %}"></script>
+    <link rel="stylesheet" crossorigin href="{% dist_static 'index' '.css' %}">
   </head>
   <body>
 <!--    <div id="root"></div>-->
