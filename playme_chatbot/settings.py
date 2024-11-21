@@ -127,7 +127,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    # BASE_DIR / 'static',
+    BASE_DIR / 'static',
     BASE_DIR / 'BoltInterface' / 'dist',  # Добавляем путь к папке dist
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'

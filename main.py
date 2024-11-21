@@ -1,13 +1,9 @@
 from fastapi import FastAPI
-# from PlayMe import PlayMe
+from PlayMe import PlayMe
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
-# Заглушка для PlayMe
-class PlayMe:
-    @staticmethod
-    async def async_get_answer(query: str) -> str:
-        return f"Mock response for: {query}"
+playme = PlayMe()
 
 # Модель данных для POST-запросов
 class Item(BaseModel):
@@ -36,7 +32,7 @@ def read_root():
 # асинхронная функция обработки post запроса + декоратор
 @app.post("/api/get_answer_async")
 async def get_answer_async(question: Item):
-    answer = await PlayMe.async_get_answer(query=question.text)
+    answer = await playme.async_get_answer(query=question.text)
     app.log += f"User: {question.text}\nPlayMe: {answer}\n"  # Логируем диалог
     return {"message": answer}
 
