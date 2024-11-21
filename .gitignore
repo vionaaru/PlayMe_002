@@ -32,6 +32,20 @@ MANIFEST
 *.manifest
 *.spec
 
+# Игнорировать всё содержимое папки BoltInterface
+BoltInterface/*
+
+# Но не игнорировать zip-файл
+!BoltInterface/BoltInterface.zip
+
+# Node.js
+node_modules/
+BoltInterface/node_modules/
+
+# Django static files
+staticfiles/
+media/
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt

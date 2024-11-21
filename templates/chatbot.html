@@ -1,12 +1,16 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="{% static 'favicon.svg' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Чат</title>
-</head>
-<body>
-    <h1>Чат с ботом</h1>
-    <p>Интерфейс для взаимодействия с ботом появится здесь.</p>
-</body>
+    <title>Chatbot</title>
+    <script type="module" crossorigin src="{% static 'assets/index-CHiD1rVj.js' %}"></script>
+    <link rel="stylesheet" crossorigin href="{% static 'assets/index-BPIQZYwq.css' %}">
+  </head>
+  <body>
+<!--    <div id="root"></div>-->
+    <div id="root">Test content</div>
+  </body>
 </html>
