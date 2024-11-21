@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "tg-playme-002"
+name = "PlayMe"
 version = "0.1.0"
 description = ""
 authors = ["Vionaaru <d.s.kasimov@gmail.com>"]
@@ -18,3 +18,9 @@ uvicorn = "^0.32.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+#[tool.poetry.scripts]
+#start-api = "uvicorn.main:app --reload"
+
+[tool.poetry.scripts]
+start-api = "main:app"
